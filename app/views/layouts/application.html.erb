@@ -2,7 +2,7 @@
 <head>
     <title>Demo</title>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    
     <%= csrf_meta_tags %>
 </head>
 <body>
@@ -31,6 +31,7 @@
             <ul class="nav navbar-nav navbar-right">
                 <li><%= link_to 'Posts', '#' %></li>
                 <% if current_user %>
+                    <li><%= link_to 'Edit Profile',edit_user_registration_path %></li>
                     <li><%= link_to 'Logout', destroy_user_session_path, method: :delete %></li>
                 <% else %>
                     <li><%= link_to 'Login', new_user_session_path %></li>

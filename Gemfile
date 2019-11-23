@@ -16,7 +16,7 @@ gem 'jquery-rails'
 # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
 gem 'webpacker', '~> 4.0'
 # Bootstrap 
-gem 'bootstrap-sass', '~> 3.4', '>= 3.4.1'
+gem 'bootstrap-sass', '~> 3.4.1'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
@@ -24,9 +24,11 @@ gem 'jbuilder', '~> 2.7'
 # Use Redis adapter to run Action Cable in production
 # gema de Devise para autenticación de usuarios
 gem 'devise'
+gem 'simple_form'
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
+gem 'ffi', '~> 1.11.2'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'

@@ -1,0 +1,16 @@
+<%= form_with(model: @publication, local: true) do |form| %>
+    <div class ="field">  
+        <%= form.label :title %><br />
+        <%= form.text_field :title, autofocus: true %>
+    </div>
+
+    <div class ="field">
+        <%= form.label :articule %><br />
+        <%= form.rich_text_area :articule %>
+    </div>
+
+    <div class ="btn">
+    <%= form.submit %>
+
+    </div>
+<%end%>

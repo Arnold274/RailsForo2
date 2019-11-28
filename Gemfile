@@ -11,6 +11,10 @@ gem 'sqlite3', '~> 1.4'
 gem 'puma', '~> 4.1'
 # Use SCSS for stylesheets
 gem 'sass-rails', '>= 6'
+#gema de paperclip para manipulación de imagenes
+gem 'paperclip', '~> 6.1'
+# Gema Jquery
+gem 'jquery-rails'
 # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
 gem 'webpacker', '~> 4.0'
 # Bootstrap 

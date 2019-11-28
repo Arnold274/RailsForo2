@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+
+<h1> Esta es la lista de posts </h1>
+
+    <ul>
+
+        <% @posts.each do |p| %>
+            <li>
+
+            <h3><%= p.title %>  </h3>
+            <p><%= p.body %>        </p>
+
+            </li>
+
+    </ul>
+            <% end %>
+
+</html>

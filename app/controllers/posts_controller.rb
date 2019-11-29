@@ -1,4 +1,9 @@
 class PostsController < ApplicationController
+    before_action :find_post, except: [:new, :create, :index]
+
+    def index
+        @post = Post.all
+    end
 
     def new
         @post = Post.new
@@ -10,22 +15,24 @@ class PostsController < ApplicationController
     end
 
     def show
-        @post = Post.find(params[:id])
+
     end
 
     def edit
-        @post = Post.find(params[:id])
+
     end
 
     def update
-        @post = Post.find(params[:id])
         @post.update(title: params[:post][:title], status: 1, content: params[:post][:content])
         redirect_to @post
     end
     
     def destroy
-        @post = Post.find(params[:id])
         @post.destroy
         redirect_to root_path
+    end
+
+    def find_post
+        @post = Post.find(params[:id])
     end
 end

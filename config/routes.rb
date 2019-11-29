@@ -4,7 +4,8 @@ Rails.application.routes.draw do
   #get "bienvenida", to: "home#index" # home/index lo redirecciona a /bienvenida
   root to: "home#index" # definir la raiz de la web
 
-  get "newpost", to: "posts#new" # post/new lo redirecciona a /newpost
+  get "posts", to: "posts#index" # post/index sera redireccionado a /posts
+  get "newpost", to: "posts#new", as: :new_post # post/new lo redirecciona a /newpost
   get "posts/:id", to: "posts#show" # post/show lo redirecciono a /showpost
   get "posts/:id/edit", to: "posts#edit" # posts/edit lo redirecciona a un submodulo de show llamado /edit
 

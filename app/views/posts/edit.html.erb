@@ -1,14 +1,3 @@
-<%= form_with(model: @post, local: true) do |form| %>
-    <div>
-        <h1><%= @post.title %></h1>
-    </div>
-
-    <div>
-        <%= form.label :content %>
-        <%= form.rich_text_area :content %>
-    </div>
-
-    <div>
-        <%= form.submit %>
-    </div>
-<% end %>
+<div class="small-container center-block">
+    <%= render "posts/form"%>
+</div>

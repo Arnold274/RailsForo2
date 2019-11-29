@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<h1>
+
+    <%= @post.title %> 
+
+    <% if @post.user == current_user %>
+    <small><%= link_to 'edit', edit_post_path(@post) %></small>
+    <% end %>
+
+</h1>
+
+<p><small> By: </strong> <%= @post.user.email %>  </small></p>
+<p><%= @post.body %></p>
+
+
+
+
+
+
+</html>

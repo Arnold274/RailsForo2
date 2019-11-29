@@ -13,6 +13,9 @@ gem 'puma', '~> 4.1'
 gem 'sass-rails', '>= 6'
 #gema de paperclip para manipulación de imagenes
 gem 'paperclip', '~> 6.1'
+# Gema Kaminari para Paginación
+gem 'kaminari', '~> 0.17.0'
+gem 'kaminari-bootstrap'
 # Gema Jquery
 gem 'jquery-rails'
 # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker

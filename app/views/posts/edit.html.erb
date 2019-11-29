@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+
+
+<h1>Editar post</h1>
+    <p><%= link_to 'back', post_path(@post) %></p>
+    <%= render 'form', post: @post %>
+    <br />
+    <p><%= link_to 'delete post', @post, method: :delete, data: {confirm: "¿Estas seguro de que quieres eliminar este post?"} %></p>
+
+</html>

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   # get 'home/index' # la ruta de llamado para home/index
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   #get "bienvenida", to: "home#index" # home/index lo redirecciona a /bienvenida

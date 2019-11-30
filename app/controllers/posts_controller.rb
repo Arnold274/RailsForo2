@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
     before_action :find_post, except: [:new, :create, :index]
-
+    before_action :authenticate_user!, only: [:new,:create,:edit,:update,:destroy]
     def index
         @post = Post.all
     end

@@ -2,6 +2,15 @@
 <div>
     <%= @post.content %>
 </div>
+<div class="text-secondary">
+    <div>
+        <h5> Written by: <strong> <%= @post.user.email %> </strong> </h5>
+    </div>
+    <div>
+        <%= @post.updated_at %>
+    </div>
+</div>
 <div>
+    <%= link_to "Edit post", @post %>
     <%= link_to "Delete post", @post, method: :delete %>
 </div>

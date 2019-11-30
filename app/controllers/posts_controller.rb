@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-    before_action :find_post, except: [:new, :create, :index]
+    before_action :find_post, except: [:new, :create, :index, :from_author]
     before_action :authenticate_user!, only: [:new,:create,:edit,:update,:destroy]
     def index
         @post = Post.all
@@ -35,5 +35,9 @@ class PostsController < ApplicationController
 
     def find_post
         @post = Post.find(params[:id])
+    end
+
+    def from_author
+        @user = User.find(params[:user_id])
     end
 end

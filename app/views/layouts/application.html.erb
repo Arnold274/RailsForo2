@@ -18,23 +18,25 @@
       <p class="alert alert-danger"><%= alert %></p>
     <% end%>
     <header>
-      <nav class="nav padding align-content-around">
-        <li class="nav-item"><%= link_to "Home", root_path, class:"nav-link" %></li>
-        <% if user_signed_in? %>
+      <div class="container ">
+        <nav class="nav padding navbar-header">
+          <li class="nav-item"><%= link_to "Home", root_path, class:"nav-link" %></li>
+            <% if user_signed_in? %>
           <li class="nav-item"><% current_user.email %></li>
         <% end %>
-      </nav>
-      <nav class="nav padding align-content-end">
-        <li class="nav-item"><%= link_to "Posts", posts_path, class:"nav-link" %></li>
-        <li class="nav-item"><%= link_to "New Post", new_post_path, class:"nav-link" %></li>
-        <% if user_signed_in? %>
-        <li class="nav-item"><%= link_to "Edit Profile", posts_path, class:"nav-link" %></li>
-        <li class="nav-item"><%= link_to "Logout", destroy_user_session_path, method: :delete, class:"nav-link" %></li>
-        <% else %>
-        <li class="nav-item"><%= link_to "Sign in", new_user_session_path, class:"nav-link" %></li>
-        <li class="nav-item"><%= link_to "Sign up", new_user_registration_path, class:"nav-link" %></li>
-        <% end %>
-      </nav>
+        </nav>
+        <nav class="nav padding navbar-nav navbar-right">
+          <li class="nav-item"><%= link_to "Posts", posts_path, class:"nav-link" %></li>
+          <li class="nav-item"><%= link_to "New Post", new_post_path, class:"nav-link" %></li>
+          <% if user_signed_in? %>
+            <li class="nav-item"><%= link_to "Edit Profile", posts_path, class:"nav-link" %></li>
+            <li class="nav-item"><%= link_to "Logout", destroy_user_session_path, method: :delete, class:"nav-link" %></li>
+          <% else %>
+          <li class="nav-item"><%= link_to "Sign in", new_user_session_path, class:"nav-link" %></li>
+          <li class="nav-item"><%= link_to "Sign up", new_user_registration_path, class:"nav-link" %></li>
+          <% end %>
+        </nav>
+      </div>
     </header>
 
     <%= yield %>
